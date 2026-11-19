@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>TikTok Auth Callback</title>
+  <style>
+    body { font-family: monospace; padding: 2rem; background: #111; color: #eee; }
+    #url { word-break: break-all; background: #222; padding: 1rem; border-radius: 6px; font-size: 0.9rem; }
+    button { margin-top: 1rem; padding: 0.5rem 1.5rem; font-size: 1rem; cursor: pointer; }
+  </style>
+</head>
+<body>
+  <h2>TikTok Auth — Copy the URL below and paste it into your terminal</h2>
+  <div id="url"></div>
+  <button onclick="navigator.clipboard.writeText(window.location.href).then(()=>this.textContent='Copied!')">Copy URL</button>
+  <script>
+    document.getElementById('url').textContent = window.location.href;
+  </script>
+</body>
+</html>
